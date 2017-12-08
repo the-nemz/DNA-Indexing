@@ -1,0 +1,2 @@
+Searching reads took an average of 0.066 milliseconds.
+49.70% of k-mers were found in the BloomFilter.
