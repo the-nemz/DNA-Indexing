@@ -1,0 +1,55 @@
+For factor 1
+first implementation,  k length = 20: 2.769947052 49432
+second implementation, k length = 20: 2.20704078674 49432
+first implementation,  k length = 40: 2.37512588501 196888
+second implementation, k length = 40: 1.87301635742 196888
+first implementation,  k length = 50: 1.97815895081 49432
+second implementation, k length = 50: 1.77407264709 49432
+For factor 2
+first implementation,  k length = 20: 2.59685516357 49432
+second implementation, k length = 20: 2.86102294922 49432
+first implementation,  k length = 40: 2.7928352356 196888
+second implementation, k length = 40: 1.87993049622 196888
+first implementation,  k length = 50: 2.08687782288 196888
+second implementation, k length = 50: 1.72400474548 196888
+For factor 3
+first implementation,  k length = 20: 2.55990028381 49432
+second implementation, k length = 20: 2.18796730042 49432
+first implementation,  k length = 40: 2.70509719849 196888
+second implementation, k length = 40: 1.87492370605 196888
+first implementation,  k length = 50: 3.22008132935 196888
+second implementation, k length = 50: 1.96194648743 196888
+For factor 4
+first implementation,  k length = 20: 2.59518623352 49432
+second implementation, k length = 20: 2.17390060425 49432
+first implementation,  k length = 40: 2.12097167969 196888
+second implementation, k length = 40: 1.91402435303 196888
+first implementation,  k length = 50: 2.40588188171 49432
+second implementation, k length = 50: 1.89805030823 196888
+For factor 5
+first implementation,  k length = 20: 2.75492668152 49432
+second implementation, k length = 20: 2.25782394409 49432
+first implementation,  k length = 40: 2.21300125122 196888
+second implementation, k length = 40: 1.88207626343 196888
+first implementation,  k length = 50: 2.27999687195 196888
+second implementation, k length = 50: 1.75786018372 196888
+For factor 1
+for kmer length 20: 990 1189
+for kmer length 40: 1303 1503
+for kmer length 50: 1298 1499
+For factor 2
+for kmer length 20: 805 1189
+for kmer length 40: 1110 1503
+for kmer length 50: 1106 1499
+For factor 3
+for kmer length 20: 603 1189
+for kmer length 40: 901 1503
+for kmer length 50: 883 1499
+For factor 4
+for kmer length 20: 436 1189
+for kmer length 40: 725 1503
+for kmer length 50: 716 1499
+For factor 5
+for kmer length 20: 300 1189
+for kmer length 40: 554 1503
+for kmer length 50: 572 1499
