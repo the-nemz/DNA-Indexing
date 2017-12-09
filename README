@@ -20,7 +20,7 @@ kmer_bloom.py: Takes a .fa file on standard input and loads it into a bloom
         example.fa is a .fa file.
 
 query_bloom.py: Takes a .fastq file on standard input and searches for the
-	reads within a bloom bloom filter that is passed as a command line
+	reads within a bloom filter that is passed as a command line
 	argument along with a k-mer length.
 	
 	USAGE: $ python2 query_bloom.py example.bloom 20 < reads.fastq
