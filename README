@@ -5,9 +5,24 @@ Isaac Nemzer
 Ryenne Dietrick
 Brian Cueto
 
-Google Doc: https://docs.google.com/document/d/1hp31cH8VdCh9CXbkfKLb0c4iDXDLKLbKdfL2zaS45TA
-Presentation: https://l.messenger.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fpresentation%2Fd%2F13EWUU2E_OGgsmYAPGTLwpZudswo2CQcPXbSn9tQLi84%2Fedit%23slide%3Did.g28663db9af_0_1&h=ATNtPsOMok0c2lDjDNyhnun1WUob9EJJg2FKQBRjowcmtnbjbXbIRRh0I9dayNympavAI5bwGBf7ud05KM6GwgQHOsmOGGmAs63H0VVms2M6mrZtRxetBZauJolIMNTkDSv1CE2FQ-RerA
+The following modules are written in python 2.7. They require the module
+pybloomfiltermmap which can be installed using
+	$ sudo pip install pybloomfiltermmap
+or built from source at https://github.com/axiak/pybloomfiltermmap/
+Pybloomfiltermmap documentation: http://axiak.github.io/pybloomfiltermmap/#
 
-capacities: .5x, 1x, 2x kmers
-error rates: .01, .02, .05, .1
-kmer lengths: 10 20 50
+kmer_bloom.py: Takes a .fa file on standard input and loads it into a bloom
+	filter using a user defined k-mer length and false positive ratio which
+	are both command line arguments.
+
+	USAGE: $ python2 kmer_bloom.py 20 .01 < example.fa
+        where 20 is the kmer length, .01 is the error rate, and
+        example.fa is a .fa file.
+
+query_bloom.py: Takes a .fastq file on standard input and searches for the
+	reads within a bloom bloom filter that is passed as a command line
+	argument along with a k-mer length.
+	
+	USAGE: $ python2 query_bloom.py example.bloom 20 < reads.fastq
+        where example.bloom is the already built bloom filter
+        20 is the kmer length, and treads.fastq is a .fastq file.

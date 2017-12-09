@@ -13,7 +13,6 @@ def main():
     global bloom, filename
 
     text = sys.stdin.readlines()
-    # reads = [line.strip() for line in text[1::4]]
     lines = [line.strip() for line in text[1:]]
     dna = ''.join(lines)
 
@@ -28,6 +27,9 @@ def main():
 
 
 def make_kmers(dna):
+    """
+    Builds the k-mers of the DNA
+    """
     kmers = []
     index = len(dna) - kmer_length
     while index >= 0:
@@ -38,6 +40,9 @@ def make_kmers(dna):
 
 
 def load_bloom(kmers):
+    """
+    Inserts all of the k-mers into the bloom filter
+    """
     global bloom, filename
 
     filename = '%d_kmer_%d_rate.bloom' % (kmer_length, int(100 * error_rate))

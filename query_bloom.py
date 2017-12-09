@@ -15,6 +15,7 @@ def main():
     global bloom, filename, trues, falses
 
     text = sys.stdin.readlines()
+    # selects the reads from the fastq file
     reads = [line.strip() for line in text[1::4]]
 
     start = time.time()
@@ -33,17 +34,13 @@ def main():
     print('Finished analysis.')
 
 
-def make_kmers(dna):
-    kmers = []
-    index = len(dna) - kmer_length
-    while index >= 0:
-        kmer = dna[index:index + kmer_length]
-        kmers.append(kmer)
-        index -= 1
-    return kmers
-
-
 def search_read(read):
+    """
+    This splits the read into its k-mer and checks to see
+    if each is in the bloom filter
+    If so, add to trues
+    Otherwise add to falses
+    """
     global bloom, trues, falses
 
     kmers = []
@@ -56,17 +53,6 @@ def search_read(read):
             falses += 1
         index -= 1
     return kmers
-
-
-def load_bloom(kmers):
-    global bloom, filename
-
-    filename = '%d_kmer_%d_rate.bloom' % (kmer_length, int(100 * error_rate))
-    print(len(kmers) // 2)
-    bloom = BloomFilter(len(kmers) // 2, error_rate, filename)
-
-    for kmer in kmers:
-        bloom.add(kmer)
 
 
 def setup():
@@ -92,7 +78,7 @@ def setup():
 
 def print_usage_error():
     print('USAGE: $ python2 query_bloom.py example.bloom 20 < reads.fastq',
-          '\n\texample.bloom is the already built bloom filter,'
+          '\n\twhere example.bloom is the already built bloom filter,'
           '\n\t20 is the kmer length, and'
           '\n\treads.fastq is a .fastq file.')
 
