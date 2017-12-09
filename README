@@ -26,3 +26,13 @@ query_bloom.py: Takes a .fastq file on standard input and searches for the
 	USAGE: $ python2 query_bloom.py example.bloom 20 < reads.fastq
         where example.bloom is the already built bloom filter,
         20 is the kmer length, and reads.fastq is a .fastq file.
+
+bloom_kmer_count.py:  Takes in the 'small_sample.fastq' file within the code
+	itself.  It takes in the read from this file and uses it to analyze the
+	data to help us make decisions for bloom-filter and hash table counting.
+	Make sure the 'small_sample.fastq' file is in the same directory as this
+	file, otherwise it will give an error.
+
+	USAGE: To run this file, run python bloom_kmer_count.py > output.txt,
+		where output.txt is where you want to print out the data for
+		different k-mer lengths and capacities.
