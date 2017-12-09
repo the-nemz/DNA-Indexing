@@ -78,8 +78,8 @@ def setup():
 
 def print_usage_error():
     print('USAGE: $ python2 query_bloom.py example.bloom 20 < reads.fastq',
-          '\n\twhere example.bloom is the already built bloom filter,'
-          '\n\t20 is the kmer length, and'
+          '\n\twhere example.bloom is the already built bloom filter,',
+          '\n\t20 is the kmer length, and',
           '\n\treads.fastq is a .fastq file.')
 
 

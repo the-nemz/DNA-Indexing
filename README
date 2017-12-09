@@ -24,5 +24,5 @@ query_bloom.py: Takes a .fastq file on standard input and searches for the
 	argument along with a k-mer length.
 	
 	USAGE: $ python2 query_bloom.py example.bloom 20 < reads.fastq
-        where example.bloom is the already built bloom filter
-        20 is the kmer length, and treads.fastq is a .fastq file.
+        where example.bloom is the already built bloom filter,
+        20 is the kmer length, and reads.fastq is a .fastq file.

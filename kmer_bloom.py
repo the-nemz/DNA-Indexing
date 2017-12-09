@@ -72,7 +72,7 @@ def print_usage_error():
     print('USAGE: $ python2 kmer_bloom.py 20 .01 < example.fa',
           '\n\twhere 20 is the kmer length,'
           '\n\t.01 is the error rate, and'
-          '\n\example.fa is a .fa file.')
+          '\n\texample.fa is a .fa file.')
 
 
 if __name__ == "__main__":
